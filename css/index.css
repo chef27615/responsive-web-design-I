@@ -68,20 +68,20 @@ h1, h2, h3, h4, h5 {
 /* top nav bar css */
 header{
 	display: flex;	
-	border: 1px solid blue;
+	/* border: 1px solid blue; */
 	margin:  auto;
 	padding: 20px 0;
-	justify-content: center;
+	justify-content: space-around;
 }
-header nav{
+header .navManu{
 	display: flex;
-    width: 75%;
-	border: 1px solid red;
-    justify-content: space-evenly;
-    padding-top: 5px;
-    
-	
+    width: 60%;
+	/* border: 1px solid red; */
+    justify-content: space-between;
+    padding-top: 2px;
+    margin-left: 70px;
 }
+
 nav a{
 	font-size: 15px;
 	padding-top: 5px;
@@ -92,6 +92,11 @@ nav a{
 nav a:hover{
 	color: blue;
 	text-decoration: underline;
+}
+
+header .logo{
+    /* border: 1px solid orange; */
+    padding-left: 10px
 }
 
 /* index page css */
@@ -185,9 +190,10 @@ body{
     display: flex;
     justify-content: center;
     width: 90%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-left: 90px;
     margin-top: 35px;
+    padding: 5px;
 }
 /* services page css */
 .svc-topimg{
