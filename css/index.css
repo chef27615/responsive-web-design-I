@@ -1,3 +1,527 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+/* top nav bar css */
+header{
+	display: flex;	
+	/* border: 1px solid blue; */
+	margin:  auto;
+	padding: 20px 0;
+	justify-content: space-around;
+}
+@media (max-width: 815px){
+    header{
+        flex-direction: column-reverse;
+        align-content: center;
+    }
+}
+@media(max-width: 515px){
+    header{
+        flex-direction: column-reverse;
+        align-content: flex-start;
+    }
+}
+
+
+header .navManu{
+	display: flex;
+    width: 60%;
+	/* border: 1px solid red; */
+    justify-content: space-between;
+    padding-top: 2px;
+    margin-left: 70px;
+}
+@media (max-width: 815px){
+    header .navManu{
+        width: 725px;
+        margin: 30px;
+        padding-right: 20px;
+        /* border: 1px solid red; */
+    }
+}
+@media(max-width: 515px){
+    header .navManu{
+        
+        flex-direction: column;
+        align-items: center;
+        width: 600px;
+        height: 150px;
+       
+        /* border: 1px solid red; */
+        
+    }
+}
+
+header .navManu a{
+    width: 500px;
+	font-size: 15px;
+	padding-top: 5px;
+    text-decoration: none;
+    color: gray;
+    
+}
+@media(max-width: 515px){
+    header .navManu a{
+        border: 1px solid black;
+        text-align: center;
+        margin-left: -150px;
+        height: 125px;
+       padding: 10px 23px 30px 0;
+       font-size: 20px;
+    }
+}
+
+header .navManu a:hover{
+	color: blue;
+	text-decoration: underline;
+}
+/* @media(max-width: 515px){
+    header .navManu a:hover{
+        display: none;
+    } */
+}
+
+header .logo{
+    /* border: 1px solid orange; */
+    padding-left: 10px
+}
+@media(max-width: 815px){
+    header .logo{
+        /* border: 1px solid red; */
+        margin-left: 145px; 
+        margin-top: 5px;
+    }
+}
+@media(max-width: 515px){
+    header .logo{
+        margin-left: 70px;
+        padding-top: 8px;
+    }
+}
+
+/* index page css */
+body{
+    width: 1024px;
+    margin: auto;
+    
+}
+
+.top-container{
+	/* border: 1px solid blue; */
+	width: 90%;
+	display: flex;
+	justify-content: space-evenly;
+    padding:50px;
+    margin-left: 150px;
+}
+@media(max-width:515px){
+    .top-container{
+        width: 500px;
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 75px;
+    }
+}
+.top-container h1{
+	font-size:73px;
+	text-align: center;
+	/* border: 1px solid red; */
+    padding: 20px 20px 0 0;
+    margin: 31px 30px 0 0;
+}
+@media(max-width:815px){
+    .main-cta{
+        /* border: 1px solid red; */
+        width: 400px;
+        height: 350px;
+        margin-left: -155px;
+        margin-top: -80px;
+        padding-right: 65px;
+        
+    }
+}
+@media(max-width: 515px){
+    .main-cta{
+        /* border: 1px solid red; */
+        height: 300px;
+        margin-top: 100px;
+        padding-right: 125px;
+
+    }
+}
+.get-btn{
+    width: 175px;
+	margin: 24px 40px 0 61px;
+    font-size: 17px;
+    padding: 5px;
+    background: white;
+    border: 1px solid black;
+}
+@media(max-width:515px){
+    .get-btn{
+        /* border: 1px solid red; */
+        margin-left: 100px;
+    }
+}
+.top-container .top-img{
+	/* border: 1px solid red; */
+}
+@media(max-width: 815px){
+    .top-container .top-img{
+        display: none;
+    }
+}
+.mainpage-content{
+	border-top: 2px solid black;
+    display: flex;
+    flex-direction: column;
+	align-content: center;
+	width: 90%;
+    margin-top: 22px;
+    margin-left: 82px;
+    
+}
+@media(max-width: 815px){
+    .mainpage-content{
+        margin-left: -5px;
+    }
+}
+
+
+.mainpage-content-top{
+
+    display: flex;
+    justify-content: center;
+    margin: 35px 25px;
+}
+@media(max-width: 815px){
+    .mainpage-content-top{
+        width: 750px;
+        justify-content: flex-start;
+    }
+}
+@media(max-width:515px){
+    .mainpage-content-top{
+        flex-direction: column;
+        align-content: flex-start;
+        /* border: 1px solid red; */
+        width: 600px;
+        margin-left: -25px;
+        padding-left: 15px;
+    }
+}
+
+
+.mainpage-content .mainpage-content-top .indexPageContent{
+    line-height: 1.17;
+    
+}
+@media(max-width:815px){
+    .mainpage-content .mainpage-content-top .indexPageContent{
+        width: 45%;
+        padding: 0 15px;
+    }
+}
+@media(max-width:515px){
+    .mainpage-content .mainpage-content-top .indexPageContent{
+        width: 500px;
+        padding-top: 26px;
+        padding-bottom: 25px;
+    }
+}
+
+.middle-img{
+	display: block;
+	margin: auto;
+}
+@media(max-width: 815px){
+    .midImg{
+        /* border: 1px solid red; */
+        padding: 0 135px 0 30px;
+        
+    }
+
+    .middle-img{
+        width: 100%;
+        height: auto;
+        
+    }
+    
+}
+
+@media(max-width: 515px){
+    .midImg{
+        width: 650px;
+        height: 176px;
+        margin-left: -20px;
+        margin-top: -10px;
+    }
+
+    .middle-img{
+        
+    }
+        
+    
+}
+
+.mainpage-content .mainpage-content-bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 25px;
+    border-bottom: 2px solid black;
+    padding-bottom: 30px; 
+}
+@media(max-width: 815px){
+    .mainpage-content .mainpage-content-bottom{
+        padding-top: 10px;
+    }
+}
+@media(max-width:515px){
+    .mainpage-content .mainpage-content-bottom{
+        flex-direction: column;
+        
+    }
+}
+.mainpage-content .mainpage-content-bottom .indexPageContent{
+    line-height: 1.15;
+    padding-left: 20px;
+}
+
+@media(max-width:815px){
+    .mainpage-content .mainpage-content-bottom{
+        /* border: 1px solid red; */
+        justify-content: flex-start;
+    }
+    .mainpage-content .mainpage-content-bottom .indexPageContent{
+        width: 25%;
+        margin-left: 20px;
+        margin-top: -5px;
+    }
+}
+
+@media(max-width:515px){
+    .mainpage-content .mainpage-content-bottom{
+        align-content: flex-start;
+        /* border: 1px solid red; */
+        margin-top: -65px;
+    }
+    .mainpage-content .mainpage-content-bottom .indexPageContent{
+        width: 450px;
+        margin-left: -15px;
+        padding-top: 10px;
+        padding-bottom: 55px;
+    }
+    
+
+}
+
+.mainFooter{
+	/* border: 1px solid yellow; */
+    /* margin-left: 26%; */
+    margin-top: 27px;
+    margin-left: 75px;
+	width: 80%;
+	display: flex;
+	padding-left: 30px;
+	justify-content: flex-start;
+}
+.mainFooter h3{
+	/* border: 1px solid green; */
+	padding-top: 10%;
+}
+@media(max-width:815px){
+    .mainFooter{
+        /* border: 1px solid red; */
+        width: 600px;
+        padding-left:-35px;
+        margin-left: 10px;
+    }
+    .mainFooter footer{
+        padding-top: 5px;
+        padding-left: -10px;
+    }
+}
+@media(max-width:515px){
+    .mainFooter{
+        width: 400px;
+        margin-left: -25px;
+        /* margin-top: -30px; */
+    }
+}
+/* copyright css */
+.copyright{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    /* border: 1px solid red; */
+    margin-left: 90px;
+    margin-top: 35px;
+    padding: 5px;
+}
+@media(max-width: 815px){
+    .copyright{
+        /* border: 1px solid red; */
+        width: 625px;
+    }
+}
+@media(max-width: 515px){
+    .copyright{
+        width: 500px;
+        /* border: 1px solid red; */
+        margin-left: -20px;
+    }
+}
+
+/* services page css */
+.svc-topimg{
+	display: flex;
+    justify-content: center;
+    
+}
+
+.svc-topCantainer{
+	display: flex;
+	/* border: 1px solid yellow; */
+	justify-content: center;
+}
+.svcsPage-info{
+	
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+}
+
+.svcsPage-info h1{
+	padding-top: 15px;
+	font-size: 25px;
+}
+.svcsPage-info p{
+	font-family: "Titillium Web", sans-serif;
+	font-size: 16px;
+}
+.svcPage-content{
+	/* border: 1px solid green; */
+	display: flex;
+	justify-content: center;
+}
+.svc-offered{
+	border-top: 3px solid gray;
+	border-bottom: 3px solid gray;
+	width: 60%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.svc-offered div{
+	height: 310px;
+	width: 400px;
+	line-height: 1.5;
+	border: 1px solid black;
+	padding: 1%;
+	background: gray;
+	margin: 2% 2%;
+}
+.svc-offered div button{
+	padding: 10px 30px;
+	border-radius: 5%;
+	margin-top: 10%;
+}
+.svcPage-footer{
+	width: 70%;
+	margin-top: 2%;
+	margin-left:10%;
+	/* border: 1px solid gray; */
+	display: flex;	
+	justify-content: center;
+}
+.svc-footer{
+	width: 30%;
+	/* border: 1px solid red; */
+	padding: 0 3%;
+	margin-left:10%;
+	line-height: 1.25;
+}
+.svc-footer ul{
+	padding: 20px;
+	list-style-type: square;
+}
+
+.svcfooter-img{
+	height: 350px;
+	width: auto;
+	
+	padding-left: 5%;
+	/* border: 1px solid blue; */
+	/* padding: 1%; */
+	
+
+
+}
 
 
